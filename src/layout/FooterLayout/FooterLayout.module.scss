@@ -1,0 +1,11 @@
+.footer {
+  width: 100%;
+  background-color: var(--p-basic-1000);
+  padding-block: 32px;
+}
+
+.container-footer {
+  width: 100%;
+  max-width: var(--max-width);
+  padding-inline: var(--padding-container-x);
+}
