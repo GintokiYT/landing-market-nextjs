@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 
 import { API } from "@/config/apis";
+import { GetProductList } from "@/types";
 
 export const metadata: Metadata = {
   title: 'Geor: Chat, Ventas e Impuestos',
@@ -10,15 +11,13 @@ export const metadata: Metadata = {
 const getProductsList = async () => {
   const response = await fetch(API.products_list, { cache: 'no-cache' });
   if(!response.ok) return [];
-  const productsList = await response.json();
+  const productsList: GetProductList = await response.json();
   return productsList.data;
 }
 
 export default async function Home() {
 
-  const productsList: any[] = await getProductsList();
-
-  console.log(productsList);
+  const productsList = await getProductsList();
 
   return (
     <div>

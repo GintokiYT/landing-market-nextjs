@@ -1,7 +1,7 @@
 import styled from './Button.module.scss';
 
 interface ButtonProps {
-  children: any
+  children: React.ReactNode
   appearance?: 'primary' | 'text-black'
   size?: 'lg' | 'md' | 'sm' | 'xs'
 } 
