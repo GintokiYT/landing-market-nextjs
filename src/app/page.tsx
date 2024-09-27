@@ -22,6 +22,7 @@ export default async function Home() {
 
   return (
     <div>
+      <h1>Home page</h1>
       { productsList.map( item => {
         return (
           <div key={item.category}>
