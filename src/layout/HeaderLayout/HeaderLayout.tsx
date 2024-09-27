@@ -2,7 +2,7 @@ import styled from './HeaderLayout.module.scss';
 import Link from 'next/link';
 import LogoGeor from '@/shared/LogoGeor/LogoGeor';
 import Button from '@/shared/Button/Button';
-import Burger from '@/shared/Icons/Burger';
+// import Burger from '@/shared/Icons/Burger';
 import ArrowP from '@/shared/Icons/ArrowP';
 
 export default function HeaderLayout() {
