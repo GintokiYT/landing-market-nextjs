@@ -19,6 +19,18 @@
   }
 }
 
+.secondary-outline {
+  border-color: var(--p-secondary-outline-border);
+
+  &:hover {
+    background-color: var(--p-secondary-low);
+  }
+
+  &:active {
+    background-color: var(--p-secondary-low-shade);
+  }
+}
+
 .text-black {
   color: var(--p-text-primary);
 

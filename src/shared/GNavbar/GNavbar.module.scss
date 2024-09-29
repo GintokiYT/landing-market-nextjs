@@ -1,0 +1,31 @@
+.GNavbar {
+  display: inline-flex;
+  align-items: center;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+
+  &:hover {
+    p {
+      background-color: var(--p-gray-scale-100);
+    }
+  }
+
+  p {
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+  }
+}
+
+.sm {
+  height: 40px;
+
+  p {
+    padding-inline: 6px;
+    height: 32px;
+  }
+}
+
+.selected {
+  border-bottom-color: var(--p-basic-1000);
+}

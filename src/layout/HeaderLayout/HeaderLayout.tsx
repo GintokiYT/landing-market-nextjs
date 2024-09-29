@@ -8,7 +8,7 @@ import ArrowP from '@/shared/Icons/ArrowP';
 export default function HeaderLayout() {
   return (
     <header className={`${styled['header-layout']}`}>
-      <div className='w-full max-w-[--max-width] h-full px-4 m-auto flex items-center justify-between'>
+      <div className='w-full max-w-[--max-width] h-full px-4 tablet:px-6 m-auto flex items-center justify-between'>
         <div className='flex gap-8'>
           <Link className='flex items-center text-[--p-text-primary]' href="/">
             <LogoGeor type='complete' />

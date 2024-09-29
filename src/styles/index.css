@@ -4,13 +4,19 @@
 @import url(dark.css);
 
 :root {
+  --header-layout-height: 48px;
   --max-width: 1280px;
   --padding-container-x: 24px;
 
 
   @media (width >= 1000px) {
+    --header-layout-height: 64px;
     --padding-container-x: 96px;
   }
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
