@@ -1,0 +1,30 @@
+.productCard {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 16px;
+  border-radius: 5px;
+  background-color: var(--p-gray-scale-50);
+}
+
+.productCardHeader {
+  display: flex;
+}
+
+.productCardBody {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  p:nth-child(2) {
+    display: -webkit-box;
+    line-clamp: 2;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  span {
+    color: var(--p-text-secondary);
+  }
+}

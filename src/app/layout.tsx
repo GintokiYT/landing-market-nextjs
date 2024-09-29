@@ -18,7 +18,7 @@ export default function RootLayout({
     <html lang="es">
       <body
         className={`${inter.variable} antialiased`}
-        data-theme="dark"
+        data-theme="light"
       >
         <div className="w-full min-h-screen flex flex-col">
           <HeaderLayout></HeaderLayout>

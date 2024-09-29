@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
-
 import { API } from "@/config/apis";
-import { GetProductList } from "@/types";
+import { GetProductList } from "@/types/proxies";
+// Componets
+import ProductCard from "@/components/ProductCard/ProductCard";
 
 export const metadata: Metadata = {
   title: 'Geor: Chat, Ventas e Impuestos',
@@ -22,13 +23,26 @@ export default async function Home() {
   return (
     <div>
       <h1>Home page</h1>
-      { productsList.map( item => {
-        return (
-          <div key={item.category}>
-            <p>{item.category}</p>
-          </div>
-        )
-      }) }
+      <div className="flex flex-col gap-8">
+        { productsList.map( item => {
+          return (
+            <div className="px-6 desktop:px-24 flex flex-col gap-3" key={item.category}>
+              <h2 className="g-tx--content-c">{item.category}</h2>
+              <div className="grid gap-3 tablet:grid-cols-2 desktop:grid-cols-3">
+                { item.items.map( product => (
+                  <ProductCard 
+                    key={product.id}
+                    name={product.name}
+                    summary={product.summary}
+                    logo={product.logo}
+                    creator={product.creator}
+                  />
+                )) }
+              </div>
+            </div>
+          )
+        })}
+      </div>
     </div>
   );
 }

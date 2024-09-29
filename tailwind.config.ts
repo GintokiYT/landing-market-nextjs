@@ -10,7 +10,10 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      
+      screens: {
+        'tablet': '700px',
+        'desktop': '1000px'
+      }
     },
   },
   plugins: [],
