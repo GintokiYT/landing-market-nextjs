@@ -45,7 +45,7 @@ export default async function Home() {
       </div>
       <div className="flex flex-col gap-6 w-full px-[--padding-container-x] mt-6 tablet:mt-4 desktop:mt-16">
         <div className="flex flex-col gap-3 w-full max-w-[342px] desktop:max-w-[--max-width] m-auto">
-          <h1 className="g-tx--h1-c text-center text-[40px] text-balance">Planifica, colabora y mide.</h1>
+          <h1 className="g-tx--h1-c text-center text-[40px] text-balance leading-10">Planifica, colabora y mide.</h1>
           <span className="g-tx--content-b text-center">Con la ayuda de la IA.</span>
         </div>
         <div className="w-full flex flex-col gap-3 tablet:max-w-[342px] desktop:max-w-[--max-width] m-auto desktop:hidden">
@@ -62,7 +62,7 @@ export default async function Home() {
         <div className="w-full h-full relative ml-6 tablet:ml-0">
           <Image 
             className="object-cover object-left"
-            src="/assets/background.png"
+            src="/assets/background.webp"
             alt="image"
             priority
             fill
