@@ -2,13 +2,15 @@
 // API -> products/list
 export interface GetProductList {
   success: boolean
-  data: {
-    category: string
-    items: Product[]
-  }[]
+  data: GetProductListData[]
 }
 
-export interface Product {
+export interface GetProductListData {
+  category: string
+  items: GetProductListDataProduct[]
+}
+
+export interface GetProductListDataProduct {
   id: number
   name: string
   slug: string

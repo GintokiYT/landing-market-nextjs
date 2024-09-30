@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from 'next/image';
 import { API } from "@/config/apis";
 import { GetProductList } from "@/types/proxies";
-// Componets
+// components
 import ProductCard from "@/components/ProductCard/ProductCard";
 import Button from "@/shared/Button/Button";
 import ArrowP from '@/shared/Icons/ArrowP';
@@ -25,9 +25,9 @@ export default async function Home() {
   const productsList = await getProductsList();
 
   return (
-    <> 
-      <div className="hidden desktop:block w-full max-w-[--max-width] m-auto px-24 h-10 sticky top-[--header-layout-height] z-10 bg-[--p-background-primary]">
-        <div className="flex justify-center gap-2">
+    <div className="pb-8"> 
+      <div className="hidden desktop:block w-full px-24 h-10 sticky top-[--header-layout-height] z-10 bg-[--p-background-primary]">
+        <div className="w-full max-w-[--max-width] m-auto flex justify-center gap-2">
           { productsList.map( item => {
             return (
               <a 
@@ -58,21 +58,22 @@ export default async function Home() {
           </Button>
         </div>
       </div>
-      <div className="w-full max-w-[--max-width] h-[409px] tablet:h-[415px] desktop:h-[686px] overflow-hidden tablet:px-[--padding-container-x] my-6 tablet:my-8">
+      <div className="w-full max-w-[--max-width] h-[409px] tablet:h-[415px] desktop:h-[686px] overflow-hidden tablet:px-[--padding-container-x] my-6 tablet:my-8 tablet:mx-auto">
         <div className="w-full h-full relative ml-6 tablet:ml-0">
           <Image 
             className="object-cover object-left"
             src="/assets/background.png"
             alt="image"
+            priority
             fill
           />
         </div>
       </div>
-      <div className="flex flex-col gap-8">
+      <div className="flex flex-col gap-8 w-full max-w-[--max-width] m-auto">
         { productsList.map( item => {
           return (
             <div 
-              className="px-[--padding-container-x] flex-col gap-3 scroll-mt-[calc(var(--header-layout-height)+40px)]" 
+              className="flex flex-col gap-3 px-[--padding-container-x] scroll-mt-[calc(var(--header-layout-height)+40px)]" 
               key={item.category}
               id={`${item.category.toLowerCase().replace(/\s+/g, '-')}`}
             >
@@ -92,6 +93,6 @@ export default async function Home() {
           )
         })}
       </div>
-    </>
+    </div>
   );
 }
